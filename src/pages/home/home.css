@@ -1,0 +1,8 @@
+.text-center{
+    text-align: center;
+    position: relative;
+    padding: 18rem 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+     color: rgb(163, 38, 40);
+}

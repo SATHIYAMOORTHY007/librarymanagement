@@ -1,0 +1,22 @@
+.table-container{
+     position: relative;
+     top:30px;
+    background-color: lightgray;
+}
+.add-book-buttton{
+   text-decoration: none;
+    color: white;
+}
+.add-button
+{ background-color: steelblue;
+   float: right;
+    
+}
+.add-button-container
+{
+    padding:25px 10px;
+}
+
+.btn-align{
+    margin: 2px;
+}
