@@ -10,6 +10,8 @@ function Update() {
   const navigate = useNavigate()
   const params = useParams()
 
+  console.log(params)
+
   useEffect(() => {
     getUserDate()
   }, [])
@@ -17,7 +19,7 @@ function Update() {
   let getUserDate = async () => {
     try {
       const books = await axios.get(
-        `https://6410168a864814e5b646cb10.mockapi.io/studentcouses/library}`,
+        `https://6410168a864814e5b646cb10.mockapi.io/studentcouses/library/${params.id}`,
       )
       myformik.setValues(books.data)
       console.log(books.data)
@@ -64,7 +66,6 @@ function Update() {
 
   return (
     <div className="container">
-      <h1>{params.id}</h1>
       <form onSubmit={myformik.handleSubmit}>
         <div className="row">
           <div className="col-lg-6">
@@ -86,7 +87,7 @@ function Update() {
             <input
               type={'text'}
               value={myformik.values.auth}
-              name="bookname"
+              name="auth"
               onChange={myformik.handleChange}
               className={`form-control ${
                 myformik.errors.auth ? 'is-invalid' : 'is-valid'

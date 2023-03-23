@@ -75,7 +75,7 @@ function Table() {
 
                       <td>
                         <Link
-                          to="/portal/update"
+                          to={`/portal/update/${book.id}`}
                           className="btn  btn-align btn-secondary btn-sm"
                         >
                           Update
