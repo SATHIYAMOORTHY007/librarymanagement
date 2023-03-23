@@ -17,7 +17,7 @@ function Update() {
   let getUserDate = async () => {
     try {
       const books = await axios.get(
-        `https://6410168a864814e5b646cb10.mockapi.io/studentcouses/library/${params.id}`,
+        `https://6410168a864814e5b646cb10.mockapi.io/studentcouses/library}`,
       )
       myformik.setValues(books.data)
       console.log(books.data)
@@ -57,6 +57,7 @@ function Update() {
         navigate(`/portal/table`)
       } catch (error) {
         console.log(error)
+        navigate(`/`)
       }
     },
   })
@@ -112,7 +113,7 @@ function Update() {
             <input
               type="submit"
               disabled={isLoading}
-              value={isLoading ? 'Update' : 'Update...'}
+              value={isLoading ? 'Update...' : 'Update'}
               className="btn mt-1 btn-primary"
             />
           </div>
